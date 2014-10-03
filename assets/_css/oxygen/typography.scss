@@ -1,0 +1,89 @@
+// typography
+
+// titles
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	cursor: default;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h2 {
+	font-size: 3em;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+h4 {
+	font-size: 1.6em;
+}
+
+h5 {
+	font-size: 1.4em;
+}
+
+h6 {
+	font-size: 1.2em;
+}
+
+.title-1 {
+	font-size: 4em;
+}
+
+.title-2 {
+	font-size: 3em;
+}
+
+.title-3 {
+	font-size: 2em;
+}
+
+.title-4 {
+	font-size: 1.6em;
+}
+
+.title-5 {
+	font-size: 1.4em;
+}
+
+.title-6 {
+	font-size: 1.2em;
+}
+
+
+// paragraphs
+
+p {
+	font-size: 1.4em;
+}
+
+
+// links
+
+a {
+	color: rgba($cor-3,.6);
+}
+
+
+// alignments
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}

@@ -1,0 +1,49 @@
+// default
+
+body {
+	min-width: 320px;
+
+	font-family: 'Oxygen', sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+
+	background-color: $cor-2;
+}
+
+
+#main {
+	color: $cor-3;
+	
+	padding: 50px 50px 50px 250px;
+	
+	@include box-sizing(border-box);
+
+	@media(max-width: 1200px){
+    padding: 50px;
+  }
+
+  @media(max-width: 480px){
+    padding: 20px;
+  }
+}
+
+
+.mobile-hidden {
+	@media(max-width: 700px){
+    display: none;
+  }
+}
+
+
+// for demos
+
+.exemple {
+	[class*="col-"] {
+		padding: 10px;
+		background-color: #eee;
+
+		&:nth-child(odd){
+			background-color: #ccc;
+		}
+	}
+}
