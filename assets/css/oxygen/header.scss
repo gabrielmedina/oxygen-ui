@@ -1,0 +1,212 @@
+// header
+
+#header {
+  @include box-sizing(border-box);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 200px;
+  height: 100%;
+
+  background-color: $cor-3;
+
+  @include transition(.2s ease);
+
+  @media(max-width: 1200px){
+    width: 0;
+    overflow: hidden;
+
+    #header-logo,
+    #nav {
+      opacity: 0;
+    }
+  }
+}
+
+.header-active {
+  width: 200px !important;
+  display: block !important;
+
+  #header-logo,
+  #nav {
+    opacity: 1 !important;
+  }
+}
+
+#header-nav {
+  cursor: pointer;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  display: none;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+
+  color: $cor-1;
+  font-size: 2.4em;
+  text-align: center;
+
+  background-color: $cor-3;
+
+  @include transition(left .2s ease);
+
+  @media(max-width: 1200px){
+    display: block;
+  }
+
+  i {
+    @include transition(.2s ease);
+  }
+}
+
+.header-nav-active {
+  left: 200px !important;
+
+  i {
+    @include transform(rotate(180deg));
+  }
+}
+
+#header-logo {
+  cursor: default;
+
+  line-height: 60px;
+
+  color: $cor-2;
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: $cor-3;
+
+  @include transition(.2s .2s ease);
+
+  a {
+    color: $cor-2;
+    text-decoration: none;
+  }
+}
+
+#nav {
+  @include transition(.2s .2s ease);
+
+  h2 {
+    color: rgba($cor-2, .6);
+    font-size: 1.5em;
+    font-weight: 400;
+
+    margin: 0;
+    padding: 10px 20px;
+
+    background: rgba($cor-2, .1);
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+  }
+
+  a {
+    @include box-sizing(border-box);
+
+    display: block;
+    line-height: 50px;
+
+    color: $cor-2;
+    font-size: 1.5em;
+    text-decoration: none;
+
+    padding: 0 20px;
+
+    @include transition(background-color .15s ease);
+
+    &:hover {
+      background-color: $cor-4;
+    }
+  }
+}
+
+
+
+#sub-header {
+  @extend .clearfix;
+  @include box-sizing(border-box);
+
+  position: relative;
+  z-index: 50;
+
+  height: 60px;
+
+  text-align: right;
+
+  padding: 15px 50px;
+
+  @media(max-width: 480px){
+    padding: 15px 20px;
+  }
+
+  background-color: $cor-1;
+}
+
+#user {
+  cursor: default;
+  position: relative;
+
+  display: inline-block;
+  height: 30px;
+}
+
+#user-nav {
+  float: left;
+
+  height: 30px;
+  line-height: 30px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  a {
+    display: block;
+    line-height: 20px;
+
+    font-size: 1.2em;
+    text-decoration: none;
+
+    border-bottom: solid 1px transparent;
+
+    &:hover {
+      border-color: #ccc;
+    }
+  }
+}
+
+#user-avatar {
+  float: left;
+  width: 30px;
+  height: 30px;
+
+  margin-left: 10px;
+
+  @include border-radius(100%);
+  background: url('../img/avatar-default.jpg') no-repeat;
+  overflow: hidden;
+}

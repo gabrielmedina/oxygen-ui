@@ -1,0 +1,124 @@
+// buttons
+
+.btn {
+  outline: none;
+  position: relative;
+  @include box-sizing(border-box);
+  @include appearance(none);
+
+  display: inline-block;
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+
+  color: #444;
+  font-size: 14px;
+  text-decoration: none;
+
+  padding: 0 20px;
+
+  border: 0;
+  border-bottom: solid 2px rgba(0,0,0,.15);
+  @include border-radius(3px);
+
+  background-color: #ddd;
+
+  span {
+    margin-right: 10px;
+
+    @media(max-width: 1000px){
+      display: none;
+    }
+  }
+
+  i {
+    height: 100%;
+    line-height: 230%;
+  }
+
+  &:hover {
+    background-color: #d2d2d2;
+  }
+
+  &:active {
+    border-bottom: 0;
+    top: 1px;
+  }
+}
+
+
+.btn-extra-small {
+  height: 25px;
+  line-height: 25px;
+
+  font-size: 11px;
+
+  padding: 0 10px;
+}
+
+.btn-small {
+  height: 30px;
+  line-height: 30px;
+
+  font-size: 13px;
+
+  padding: 0 15px;
+}
+
+.btn-large {
+  height: 50px;
+  line-height: 50px;
+
+  font-size: 18px;
+
+  padding: 0 25px;
+}
+
+
+.btn-success {
+  color: #fff;
+  background-color: #1ABC9C;
+
+  &:hover {
+    background-color: #17AC8E;
+  }
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #E74C3C;
+
+  &:hover {
+    background-color: #E43E2C;
+  }
+}
+
+
+.btn-block {
+  display: block;
+  margin-bottom: 10px;
+
+  i {
+    float: right;
+  }
+}
+
+
+.btn-line {
+  border: 0;
+  background: none;
+
+  &:hover {
+    background: #eee;
+  }
+}
+
+
+.pagination {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: inline-block;
+  }
+}
