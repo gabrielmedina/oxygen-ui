@@ -1,9 +1,0 @@
-// boxs
-
-.box {
-	cursor: default;
-	@include box-sizing(border-box);
-	
-	padding: 20px;
-	background-color: $cor-1;
-}
